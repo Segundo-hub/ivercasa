@@ -1,0 +1,23 @@
+.menu-container{
+	background-color: var(--white-primary);
+	width: 70%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 50px 26px;
+	display: none;
+	z-index: 2;
+	color: var(--black-primary);
+	transition: transform 400ms ease-in;
+	&.active{
+		transform: translateX(0);
+	}
+}
+
+.menu{
+	&__link{
+		font-size: 1.25rem;
+		display: block;
+		padding: 1rem 0;
+	}
+}

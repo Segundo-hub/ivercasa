@@ -1,0 +1,25 @@
+.menu{
+	&--toggle{
+		background-color: transparent;
+		position: relative;
+		width: 28px;
+		height: 17px;
+		margin-right: 1rem;
+	}
+	&--line{
+		left: 0;
+		background-color: var(--white-second);
+		height: 3px;
+		position: absolute;
+		width: 100%;
+		&:nth-child(1){
+			top: 0;
+		}
+		&:nth-child(2){
+			top: 7px;
+		}
+		&:nth-child(3){
+			top: 14px;
+		}
+	}
+}

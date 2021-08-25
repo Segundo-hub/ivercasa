@@ -1,0 +1,27 @@
+<div class="menu-container" style="--light: #242424; --dark: #404040">
+	<app-brand></app-brand>
+	<nav class="main-menu" [ngClass]="activeMenu ? 'active' : ''">
+		<ul class="menu__list">
+			<li>
+				<a class="menu__link" routerLink="/sobre">Empresa</a>
+			</li>
+			<li>
+				<a class="menu__link" routerLink="/blog">Blog</a>
+			</li>
+			<li>
+				<a class="menu__link" routerLink="/favorites">Favoritos</a>
+			</li>
+			<li>
+				<a class="menu__link" routerLink="/contact">Contáctenos</a>
+			</li>
+		</ul>
+	</nav>
+	<div>
+		<hr>
+		<div class="social-media">
+			<a href="#instagram" class="icon">INS</a>
+			<a href="#instagram" class="icon">FACe</a>
+		</div>
+		<p>Términos y Condiciones de Uso</p>
+	</div>
+</div>
