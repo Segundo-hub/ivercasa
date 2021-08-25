@@ -1,0 +1,23 @@
+// ========================================================================
+// ------------------------- MODULAR STYLES -------------------------------
+// ========================================================================
+
+.l-section{
+	width: calc(100% - 2rem);
+	margin-left: 1rem;
+	margin-right: 1rem;
+	max-width: var(--max-width);
+}
+
+.flex, .cross-center, .main-center, .cross-end, .cross-start{
+	display: flex;
+}
+.cross-center{
+	align-items: center;
+	align-content: center;
+}
+.main-center{
+	justify-content: center;
+}
+
+

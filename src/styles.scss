@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/_settings";
+@import "./assets/styles/_reset";
+
 :root{
 	// BRAND COLORS
 	--black-primary: #000000;
@@ -16,4 +18,19 @@
 	--white-third: #E7E7E7;
 	--white-darken: #F7F7F7;
 
+	--max-width: #{$max-width};
+
+	// ----- FONTS -------
+	--base-font-size: 14px;
+	--base-font-family: 'Overpass', sans-serif;
+}
+
+// ========================================================================
+// ---------------------------- BASE STYLES -------------------------------
+// ========================================================================
+
+html{
+	font-size: var(--base-font-size);
+	font-family: var(--base-font-family);
+	overflow-x: hidden;
 }

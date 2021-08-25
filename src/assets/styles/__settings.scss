@@ -1,0 +1,32 @@
+// breakpoints
+@use 'sass:math';
+
+$sm: 36em; // 570px
+$md: 48em; // 768px
+$lg: 62em; // 992px
+$xl: 75em; // 1200px
+$xxl: 88em; // 1392px
+
+$max-width: 1140px;
+$max-width-lg: 1400px;
+
+// media mixin
+
+@mixin from($size){
+	@media screen and (min-width: $size) {
+		@content;
+	}
+}
+
+
+@mixin to($size){
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin from-to($from, $to){
+	@media screen and (min-width: math.min($from, $to)) and (max-width: math.max($from, $to)) {
+		@content;
+	}
+}
