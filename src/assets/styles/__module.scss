@@ -4,9 +4,9 @@
 @import './_settings';
 
 .l-section{
-	width: calc(100% - 2rem);
-	margin-left: 1rem;
-	margin-right: 1rem;
+	width: calc(100% - var(--l-space));
+	margin-left: var(--l-margin, 1rem);
+	margin-right: var(--l-margin, 1rem);
 	max-width: var(--max-width);
 	@include from($max-width){
 		margin-left: auto;
@@ -18,6 +18,11 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.nowrap{
+	flex-wrap: nowrap;
+}
+
 .cross-center{
 	align-items: center;
 	align-content: center;
@@ -37,11 +42,15 @@
 	justify-content: space-between;
 }
 
-.to-left{
+// fixed
+.to-start{
+	margin-left: auto;
+	margin-right: 0;
+}
+.to-end{
 	margin-left: 0;
 	margin-right: auto;
 }
-
 
 // ========================================================================
 // ------------------------- COMPONENTS STYLES ----------------------------
@@ -50,16 +59,24 @@
 .btn, .input, .btn-icon, .btn-icon-only{
 	border-radius: var(--radius);
 }
+.border-top{
+	border-radius: var(--radius) var(--radius) 0 0;
+}
+.border-bottom{
+	border-radius: 0 0 var(--radius) var(--radius);
+}
 .btn-icon{
 	display: inline-flex;
 	align-items: center;
 	padding: .75rem 1.75rem;
 	font-weight: 700;
+	// variant
 	&.border-alpha{
 		background-color: transparent;
 		border: 1px solid var(--white-primary);
 		color: var(--white-primary);
 	}
+	// variant
 	&.border-grey{
 		border: 1px solid var(--black-lighter);
 	}
@@ -70,13 +87,16 @@
 	justify-content:center;
 	align-content: center;
 	padding: 1rem;
+	// variant
 	&.border-alpha{
 		border: 1px solid var(--white-primary);
 	}
+	// variant
 	&.border-grey{
 		border: 1px solid var(--grey-medium);
 	}
 }
+
 .btn-icon-24{
 	width: 36px;
 	height: 36px;
@@ -88,28 +108,29 @@
 	color: var(--black-primary);
 }
 
-
-
-
 .btn, .input{
 	padding: 1rem 1.5rem;
-	//margin-bottom: 1rem;
+	//variant
 	&-lighter{
 		background-color: var(--grey-lighter);
 		color: var(--black-primary);
 	}
+	//variant
 	&-white{
 		background-color: var(--white-primary);
 		color: var(--black-primary);
 	}
+	//variant
 	&-dark{
 		background-color: var(--black-primary);
 		color: var(--grey-lighter);
 	}
+	//variant placeholder
 	&::placeholder{
 		color: inherit;
 	}
 }
+
 .full{
 	width: 100%;
 }
@@ -129,7 +150,7 @@
 }
 
 .title-2{
-	font-size: 1.75;
+	font-size: 1.75rem;
 }
 .title-3{
 	font-size: 1.5rem;;
@@ -148,7 +169,7 @@
 	}
 
 	.title-2{
-		font-size: 2;
+		font-size: 2rem;
 	}
 	.title-3{
 		font-size: 1.75rem;;
@@ -156,6 +177,10 @@
 	.title-4{
 		font-size: 1.5rem;
 	}
+}
+
+.block{
+	display: block;
 }
 
 // ========================================================================
@@ -180,6 +205,11 @@
 	}
 }
 
+
+.mx-auto{
+	margin-right: auto;
+	margin-left: auto;
+}
 
 @for $i from 1 to 7{
 

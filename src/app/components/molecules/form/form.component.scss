@@ -4,18 +4,15 @@
 	background-color: var(--black-second);
 	border-radius: var(--radius-alt);
 	padding: 1.1rem;
+	@include from($md){
+		padding: 1.25rem 3rem;
+	}
 	@include from($lg){
 		padding: 1.1rem 2rem;
-		width: 90%;
+		width: 85%;
 	}
 }
-.privacy{
-	padding: .5rem 0 2rem;
-	font-size: .8rem;
-	p{
-		margin-left: 1rem;
-	}
-}
+
 .form__caption{
 	font-size: 1.5rem;
 	padding: 1.5rem 0 2rem;

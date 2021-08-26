@@ -1,7 +1,5 @@
 @import "./assets/styles/_settings";
 @import "./assets/styles/_reset";
-@import './assets/styles/_module';
-
 :root{
 	// BRAND COLORS
 	--black-primary: #232323;
@@ -18,7 +16,8 @@
 	--white-second: #F8F8F8;
 	--white-third: #E7E7E7;
 	--white-darken: #F7F7F7;
-
+}
+:root{
 	--max-width: #{$max-width};
 
 	--header-height: 70px;
@@ -32,6 +31,12 @@
 
 	--logo-width: 8rem;
 	--logo-height: 1.1rem;
+
+	--l-space: 2rem;
+	@include from($md){
+		--l-margin: 2rem;
+		--l-space: 4rem;
+	}
 	@include from($max-width-lg){
 		--max-width: #{$max-width-lg};
 	}
@@ -82,3 +87,6 @@ hr{
 		margin: 2rem 0;
 	}
 }
+
+// Para la "Cascada de CSS"
+@import './assets/styles/_module';

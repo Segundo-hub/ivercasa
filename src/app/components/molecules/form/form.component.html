@@ -1,12 +1,31 @@
-<form class="footer-form mt-3 mb-3">
-	<h3 class="form__caption">¿Necesitas mas información?</h3>
-	<input class="input input-lighter mb-2 full lg:50%" type="text" placeholder="Nombre"/>
-	<input class="input input-lighter mb-2 full lg:50%" type="number" placeholder="Telefono"/>
-	<input class="input input-lighter mb-2 full" type="email" placeholder="Email"/>
-	<textarea class="input input-lighter form__textarea mb-2 full" placeholder="Mensaje"></textarea>
-	<label for="checked-privacy" class="flex privacy">
-		<input type="checkbox" name="" id="checked-privacy">
-		<p>Al presionar el botón “ENVIAR” confirmas que has leído, entendido y aceptado las condiciones de nuestra Política de Privacidad mostradas en este <a href="#">LINK</a></p>
+<form class="footer-form mt-3 mb-3 mx-auto">
+	<h3 class="form__caption">
+		¿Necesitas mas información?
+	</h3>
+	<label for="name">
+		<input class="input input-lighter mb-2 full lg:50%"
+			type="text" placeholder="Nombre" id="name"
+		/>
 	</label>
-	<button type="submit" class="btn btn-dark full py-3">Enviar</button>
+	<label for="phone">
+		<input class="input input-lighter mb-2 full lg:50%"
+			type="number" placeholder="Telefono" id="phone"
+		/>
+	</label>
+	<label for="mail">
+		<input class="input input-lighter mb-2 full"
+			type="email" placeholder="Email" id="mail"
+		/>
+	</label>
+	<textarea class="input input-lighter form__textarea mb-3 full" placeholder="Mensaje"></textarea>
+
+	<label for="checked-privacy" class="flex nowrap mb-4">
+		<input type="checkbox" name="" id="checked-privacy" class="me-2">
+		<p class="to-end">
+			Al presionar el botón “ENVIAR” confirmas que has leído, entendido y aceptado las condiciones de nuestra Política de Privacidad mostradas en este <a href="#">LINK</a>
+		</p>
+	</label>
+	<button type="submit" class="btn btn-dark full py-3">
+		Enviar
+	</button>
 </form>

@@ -18,7 +18,6 @@ import { Component, OnInit } from '@angular/core';
 			<path class="b" d="M1232.061,14.712l.022.053.074-.182L1246.485,50h10.885L1237.014,2.159h-9.635L1207.023,50h10.653Z" transform="translate(-899.986 -1.61)"/>
 			<path class="b" d="M852.219,14.712l0,0,.054-.133L866.6,50h10.924L857.173,2.159h-9.635L827.181,50h10.635Z" transform="translate(-616.767 -1.61)"/></g>
 		</svg>`,
-	styleUrls: ['./brand.component.scss']
 })
 export class BrandComponent implements OnInit {
 

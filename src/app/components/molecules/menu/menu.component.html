@@ -1,20 +1,22 @@
-<div class="menu-container" style="--light: #242424; --dark: #404040" [ngClass]="activeMenu ? 'active' : ''">
+<div class="menu-container" style="--light: #242424; --dark: #404040"
+		[ngClass]="activeMenu ? 'active' : ''"
+	>
 	<div class="only-mobile">
 		<app-brand></app-brand>
 	</div>
 
 	<nav class="main-menu mt-4" >
 		<ul class="menu__list">
-			<li>
+			<li class="menu-list__item">
 				<a class="menu__link" routerLink="/sobre">Empresa</a>
 			</li>
-			<li>
+			<li class="menu-list__item">
 				<a class="menu__link" routerLink="/blog">Blog</a>
 			</li>
-			<li>
+			<li class="menu-list__item">
 				<a class="menu__link" routerLink="/favorites">Favoritos</a>
 			</li>
-			<li>
+			<li class="menu-list__item">
 				<a class="menu__link" routerLink="/contact">Contáctenos</a>
 			</li>
 		</ul>
@@ -35,5 +37,8 @@
 			</a>
 		</div>
 		<a href="#">Términos y Condiciones de Uso</a>
+	</div>
+
+	<div class="overlay">
 	</div>
 </div>

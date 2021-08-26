@@ -30,3 +30,11 @@ $max-width-lg: 1400px;
 		@content;
 	}
 }
+
+@mixin full-wide($pos){
+	position: $pos;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
