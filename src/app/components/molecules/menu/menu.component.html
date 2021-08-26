@@ -1,9 +1,9 @@
 <div class="menu-container" style="--light: #242424; --dark: #404040"
-		[ngClass]="activeMenu ? 'active' : ''"
+		(click)="closeMenu()" [ngClass]="activeMenu ? 'active' : ''"
 	>
-	<div class="only-mobile">
+	<a routerLink="/" class="only-mobile">
 		<app-brand></app-brand>
-	</div>
+	</a>
 
 	<nav class="main-menu mt-4" >
 		<ul class="menu__list">

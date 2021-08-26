@@ -12,36 +12,26 @@ import { BrandBigComponent } from './brand/brand-big.component';
 import { FormSearchComponent } from './form-search/form-search.component';
 import { FormValuatorComponent } from './form-valuator/form-valuator.component';
 import { SingleCardComponent } from './single-card/single-card.component';
+import { PhoneNumberComponent } from './phone-number/phone-number.component';
 
-
+const components = [MenuComponent,
+	MenuMobileComponent,
+	BrandComponent,
+	BrandBigComponent,
+	FormComponent,
+	FooterInfoComponent,
+	FooterHeroComponent,
+	FormSearchComponent,
+	FormValuatorComponent,
+	SingleCardComponent,
+	PhoneNumberComponent]
 
 @NgModule({
-	declarations: [
-		MenuComponent,
-		MenuMobileComponent,
-		BrandComponent,
-		BrandBigComponent,
-		FormComponent,
-		FooterInfoComponent,
-		FooterHeroComponent,
-		FormSearchComponent,
-		FormValuatorComponent,
-		SingleCardComponent
-	],
+	declarations: [ ...components],
 	imports: [
 		CommonModule,
 		RouterModule
 	],
-	exports: [
-		MenuComponent,
-		MenuMobileComponent,
-		FormComponent,
-		FooterInfoComponent,
-		FooterHeroComponent,
-		BrandBigComponent,
-		FormSearchComponent,
-		FormValuatorComponent,
-		SingleCardComponent
-	]
+	exports: [ ...components]
 })
 export class MoleculesModule { }

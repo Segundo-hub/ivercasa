@@ -43,11 +43,11 @@
 }
 
 // fixed
-.to-start{
-	margin-left: auto;
-	margin-right: 0;
-}
 .to-end{
+	margin-right: 0;
+    margin-left: auto;
+}
+.to-start{
 	margin-left: 0;
 	margin-right: auto;
 }
@@ -161,6 +161,10 @@
 
 .txt-center{
 	text-align: center;
+}
+.align{
+	display: table-cell;
+    vertical-align: middle;
 }
 
 @include from($lg){

@@ -2,7 +2,8 @@
 	<div class="l-section">
 		<div class="cross-center">
 			<app-menu-mobile (emitOpen)="openMenu = $event"></app-menu-mobile>
-			<app-menu [activeMenu]="openMenu"></app-menu>
+			<app-menu [activeMenu]="openMenu" (onClose)="openMenu = $event"></app-menu>
+			<phone-number class="to-end"></phone-number>
 		</div>
 		<div class="overlay only-mobile">
 		</div>
