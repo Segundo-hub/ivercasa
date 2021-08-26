@@ -8,13 +8,14 @@ import { FormSearchAdvancedComponent } from './form-search-advanced/form-search-
 @NgModule({
 	declarations: [
 		PropertyCardComponent,
-  FormSearchAdvancedComponent
+		FormSearchAdvancedComponent
 	],
 	imports: [
 		CommonModule
 	],
 	exports: [
-		PropertyCardComponent
+		PropertyCardComponent,
+		FormSearchAdvancedComponent
 	]
 })
 export class OrganismsModule { }
