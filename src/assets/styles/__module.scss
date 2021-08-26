@@ -1,16 +1,22 @@
 // ========================================================================
 // ------------------------- MODULAR STYLES -------------------------------
 // ========================================================================
+@import './_settings';
 
 .l-section{
 	width: calc(100% - 2rem);
 	margin-left: 1rem;
 	margin-right: 1rem;
 	max-width: var(--max-width);
+	@include from($max-width){
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
-.flex, .cross-center, .main-center, .cross-end, .cross-start{
+.flex, .cross-center, .main-center, .cross-end, .cross-start, .main-end, .space-between{
 	display: flex;
+	flex-wrap: wrap;
 }
 .cross-center{
 	align-items: center;
@@ -20,4 +26,204 @@
 	justify-content: center;
 }
 
+.cross-end{
+	align-content: flex-end;
+}
 
+.main-end{
+	justify-content: flex-end;
+}
+.space-between{
+	justify-content: space-between;
+}
+
+.to-left{
+	margin-left: 0;
+	margin-right: auto;
+}
+
+
+// ========================================================================
+// ------------------------- COMPONENTS STYLES ----------------------------
+// ========================================================================
+
+.btn, .input, .btn-icon, .btn-icon-only{
+	border-radius: var(--radius);
+}
+.btn-icon{
+	display: inline-flex;
+	align-items: center;
+	padding: .75rem 1.75rem;
+	font-weight: 700;
+	&.border-alpha{
+		background-color: transparent;
+		border: 1px solid var(--white-primary);
+		color: var(--white-primary);
+	}
+	&.border-grey{
+		border: 1px solid var(--black-lighter);
+	}
+}
+
+.btn-icon-only{
+	display: inline-flex;
+	justify-content:center;
+	align-content: center;
+	padding: 1rem;
+	&.border-alpha{
+		border: 1px solid var(--white-primary);
+	}
+	&.border-grey{
+		border: 1px solid var(--grey-medium);
+	}
+}
+.btn-icon-24{
+	width: 36px;
+	height: 36px;
+	border-radius: var(--radius);
+	background-color: var(--white-third);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black-primary);
+}
+
+
+
+
+.btn, .input{
+	padding: 1rem 1.5rem;
+	//margin-bottom: 1rem;
+	&-lighter{
+		background-color: var(--grey-lighter);
+		color: var(--black-primary);
+	}
+	&-white{
+		background-color: var(--white-primary);
+		color: var(--black-primary);
+	}
+	&-dark{
+		background-color: var(--black-primary);
+		color: var(--grey-lighter);
+	}
+	&::placeholder{
+		color: inherit;
+	}
+}
+.full{
+	width: 100%;
+}
+
+
+.only-mobile{
+	@include from($lg){
+		display: none;
+	}
+}
+
+.title-1, .title-2, .title-3, .title-4{
+	font-weight: normal;
+}
+.title-1{
+	font-size: 2rem;
+}
+
+.title-2{
+	font-size: 1.75;
+}
+.title-3{
+	font-size: 1.5rem;;
+}
+.title-4{
+	font-size: 1.25rem;
+}
+
+.txt-center{
+	text-align: center;
+}
+
+@include from($lg){
+	.title-1{
+		font-size: 2.25rem;
+	}
+
+	.title-2{
+		font-size: 2;
+	}
+	.title-3{
+		font-size: 1.75rem;;
+	}
+	.title-4{
+		font-size: 1.5rem;
+	}
+}
+
+// ========================================================================
+// ------------------------- LAYOUT STYLES -------------------------------
+// ========================================================================
+
+.grid{
+	display: grid;
+	grid-template-columns: 100%;
+	gap: var(--grid-gap);
+}
+
+@include from($lg){
+	.lg\:50\%{
+		width: 50%;
+	}
+	.lg\:grid-2{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.lg\:grid-3{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+
+@for $i from 1 to 7{
+
+	// MARGINS
+	.ms-#{$i}{
+		margin-left: #{$i * .5}rem;
+	}
+	.me-#{$i}{
+		margin-right: #{$i * .5}rem;
+	}
+	.mx-#{$i}{
+		margin-right: #{$i * .5}rem;
+	    margin-left: #{$i * .5}rem;
+	}
+	.mt-#{$i}{
+		margin-top: #{$i * .5}rem;
+	}
+	.mb-#{$i}{
+		margin-bottom: #{$i * .5}rem;
+	}
+	.my-#{$i}{
+		margin-top: #{$i * .5}rem;
+	    margin-bottom: #{$i * .5}rem;
+	}
+
+	// PADDINGS
+	.ps-#{$i}{
+		padding-left: #{$i * .5}rem;
+	}
+	.pe-#{$i}{
+		padding-right: #{$i * .5}rem;
+	}
+	.px-#{$i}{
+		padding-right: #{$i * .5}rem;
+	   padding-left: #{$i * .5}rem;
+	}
+	.pt-#{$i}{
+		padding-top: #{$i * .5}rem;
+	}
+	.pb-#{$i}{
+		padding-bottom: #{$i * .5}rem;
+	}
+	.py-#{$i}{
+		padding-top: #{$i * .5}rem;
+	   padding-bottom: #{$i * .5}rem;
+	}
+}

@@ -1,17 +1,18 @@
 @import "./assets/styles/_settings";
 @import "./assets/styles/_reset";
+@import './assets/styles/_module';
 
 :root{
 	// BRAND COLORS
-	--black-primary: #000000;
-	--black-second: #232323;
-	--black-third: #484848;
+	--black-primary: #232323;
+	--black-second: #484848;
 	--black-lighter:#707070;
 
 	--grey-dark: #9E9E9E;
 	--grey-medium: #C6C6C6;
 	--grey-lighter: #E1E1E1;
 	--grey-lighter-alpha: #00000029;
+	--grey-dark-alpha: #54545474;
 
 	--white-primary: #FFF;
 	--white-second: #F8F8F8;
@@ -20,17 +21,64 @@
 
 	--max-width: #{$max-width};
 
+	--header-height: 70px;
+	--grid-gap: 1rem;
+
+	--radius: 10px;
+	--radius-alt: 5px;
 	// ----- FONTS -------
 	--base-font-size: 14px;
 	--base-font-family: 'Overpass', sans-serif;
+
+	--logo-width: 8rem;
+	--logo-height: 1.1rem;
+	@include from($max-width-lg){
+		--max-width: #{$max-width-lg};
+	}
+	@include from($lg){
+		--base-font-size: 16px;
+		--logo-width: 11rem;
+		--logo-height: 1.5rem;
+	}
 }
 
 // ========================================================================
 // ---------------------------- BASE STYLES -------------------------------
 // ========================================================================
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	&::after, &::before{
+		box-sizing: inherit;
+	}
+}
 
 html{
 	font-size: var(--base-font-size);
 	font-family: var(--base-font-family);
 	overflow-x: hidden;
+	font-weight: 400;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	transition: color 350ms ease-in-out;
+	color: inherit;
+}
+button, input, select{
+	outline: none;
+	border: none;
+}
+hr{
+	border: none;
+	height: 0;
+	border-top: 1px solid var(--black-second);
+	&.separator{
+		margin: 2rem 0;
+	}
 }

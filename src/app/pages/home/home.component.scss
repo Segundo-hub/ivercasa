@@ -1,0 +1,18 @@
+@import './../../../assets/styles/_settings';
+.hero-header{
+	background: #fff url(./../../../assets/hero.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 100vh;
+	@include from($lg){
+		min-height: 650px;
+	}
+}
+
+.propertys-list{
+	padding: 2rem 0;
+}
+
+.register-property{
+	background: url(./../../../assets/register-prop.png);
+	padding: 2rem 0 4rem;
+}

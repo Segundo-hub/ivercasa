@@ -1,0 +1,24 @@
+<section class="hero-header cross-center">
+	<div class="l-section">
+		<form-search></form-search>
+	</div>
+</section>
+
+<section class="l-section">
+	<div class="main-center pt-6 pb-3">
+		<h3 class="title-3 full txt-center">Propiedades <strong>Destacadas</strong></h3>
+		<button class="btn btn-dark mt-2 px-6">VER MAS</button>
+	</div>
+	<div class="propertys-list grid lg:grid-3">
+		<property-card *ngFor="let property of properties" [property]="property">
+		</property-card>
+	</div>
+</section>
+
+<section class="register-property">
+	<div class="l-section">
+		<h3 class="title-3 full txt-center py-2">Valoremos su <strong>propiedad</strong></h3>
+		<p class="txt-center">¿Quiere conocer el precio de mercado actual de su propiedad?</p>
+		<form-valuator></form-valuator>
+	</div>
+</section>
