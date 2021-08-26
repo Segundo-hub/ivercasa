@@ -1,6 +1,28 @@
+@import './../../../../assets/styles/_settings';
+
 .footer-form{
 	background-color: var(--black-second);
-	border-radius: var(--radius);
-	padding: 1rem;
-	margin: 3.15rem 0;
+	border-radius: var(--radius-alt);
+	padding: 1.1rem;
+	@include from($lg){
+		padding: 1.1rem 2rem;
+		width: 90%;
+	}
+}
+.privacy{
+	padding: .5rem 0 2rem;
+	font-size: .8rem;
+	p{
+		margin-left: 1rem;
+	}
+}
+.form__caption{
+	font-size: 1.5rem;
+	padding: 1.5rem 0 2rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+.form__textarea{
+	min-height: 100px;
 }

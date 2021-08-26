@@ -1,6 +1,9 @@
-<div class="menu-container" style="--light: #242424; --dark: #404040">
-	<app-brand></app-brand>
-	<nav class="main-menu" [ngClass]="activeMenu ? 'active' : ''">
+<div class="menu-container" style="--light: #242424; --dark: #404040" [ngClass]="activeMenu ? 'active' : ''">
+	<div class="only-mobile">
+		<app-brand></app-brand>
+	</div>
+
+	<nav class="main-menu mt-4" >
 		<ul class="menu__list">
 			<li>
 				<a class="menu__link" routerLink="/sobre">Empresa</a>
@@ -16,12 +19,21 @@
 			</li>
 		</ul>
 	</nav>
-	<div>
-		<hr>
-		<div class="social-media">
-			<a href="#instagram" class="icon">INS</a>
-			<a href="#instagram" class="icon">FACe</a>
+
+	<div class="only-mobile">
+		<hr class="separator" style="width: 30%; --black-second: var(--grey-dark)">
+		<div class="social-media mb-4 pt-2">
+			<a href="#" class="btn-icon-24">
+				<svg width="15.786" height="15.783" viewBox="0 0 15.786 15.783">
+					<path fill="currentColor" d="M7.89,6.083a4.046,4.046,0,1,0,4.046,4.046A4.04,4.04,0,0,0,7.89,6.083Zm0,6.677a2.631,2.631,0,1,1,2.631-2.631A2.636,2.636,0,0,1,7.89,12.76Zm5.156-6.843a.944.944,0,1,1-.944-.944A.942.942,0,0,1,13.045,5.917Zm2.68.958a4.671,4.671,0,0,0-1.275-3.307,4.7,4.7,0,0,0-3.307-1.275c-1.3-.074-5.209-.074-6.512,0A4.7,4.7,0,0,0,1.325,3.565,4.686,4.686,0,0,0,.05,6.871c-.074,1.3-.074,5.209,0,6.512A4.671,4.671,0,0,0,1.325,16.69a4.707,4.707,0,0,0,3.307,1.275c1.3.074,5.209.074,6.512,0a4.671,4.671,0,0,0,3.307-1.275,4.7,4.7,0,0,0,1.275-3.307c.074-1.3.074-5.205,0-6.508Zm-1.683,7.906a2.663,2.663,0,0,1-1.5,1.5c-1.039.412-3.5.317-4.652.317a17.529,17.529,0,0,1-4.652-.317,2.663,2.663,0,0,1-1.5-1.5c-.412-1.039-.317-3.5-.317-4.652a17.529,17.529,0,0,1,.317-4.652,2.663,2.663,0,0,1,1.5-1.5c1.039-.412,3.5-.317,4.652-.317a17.529,17.529,0,0,1,4.652.317,2.663,2.663,0,0,1,1.5,1.5c.412,1.039.317,3.5.317,4.652S14.454,13.746,14.042,14.781Z" transform="translate(0.005 -2.238)"/>
+				</svg>
+			</a>
+			<a href="#" class="btn-icon-24 ms-3">
+				<svg width="9.849" height="18.389" viewBox="0 0 9.849 18.389">
+					<path fill="currentColor" d="M10.813,10.344l.511-3.328H8.13V4.856a1.664,1.664,0,0,1,1.876-1.8h1.452V.225A17.7,17.7,0,0,0,8.881,0C6.252,0,4.533,1.594,4.533,4.479V7.016H1.609v3.328H4.533v8.045h3.6V10.344Z" transform="translate(-1.609)"/>
+				</svg>
+			</a>
 		</div>
-		<p>Términos y Condiciones de Uso</p>
+		<a href="#">Términos y Condiciones de Uso</a>
 	</div>
 </div>
