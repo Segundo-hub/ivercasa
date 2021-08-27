@@ -43,9 +43,9 @@
 	</div>
 	<div class="article__contact">
 		<div class="main-end">
-			<button class="btn-icon-only border-grey">
-				<svg width="19.792" height="17.443" viewBox="0 0 19.792 17.443">
-					<path class="a" d="M16.965,3.372a5.018,5.018,0,0,0-6.848.5l-.723.745-.723-.745a5.018,5.018,0,0,0-6.848-.5A5.269,5.269,0,0,0,1.46,11l7.1,7.332a1.15,1.15,0,0,0,1.662,0L17.325,11a5.266,5.266,0,0,0-.36-7.63Z" transform="translate(0.502 -1.746)"/>
+			<button class="btn-icon-only border-grey" [style]="property.like ? '--like: tomato' : ''">
+				<svg width="20" height="20" viewBox="0 0 19.792 17.443">
+					<path style="fill: var(--like, none); stroke: var(--like, currentColor)" d="M16.965,3.372a5.018,5.018,0,0,0-6.848.5l-.723.745-.723-.745a5.018,5.018,0,0,0-6.848-.5A5.269,5.269,0,0,0,1.46,11l7.1,7.332a1.15,1.15,0,0,0,1.662,0L17.325,11a5.266,5.266,0,0,0-.36-7.63Z" transform="translate(0.502 -1.746)"/>
 				</svg>
 			</button>
 			<button class="btn btn-dark ms-2 px-4">Contactar</button>

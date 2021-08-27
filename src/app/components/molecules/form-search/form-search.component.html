@@ -4,21 +4,21 @@
 	</h2>
 	<div class="form-content">
 		<div class="selected-type mb-2 full main-center">
-			<button class="btn btn-dark">En venta</button>
-			<button class="btn">Alquiler</button>
+			<button class="tab border-b active">En venta</button>
+			<button class="tab border-b">Alquiler</button>
 		</div>
-		<div class="space-between">
-			<label for="property">
-				<input class="input input-lighter full mb-2" type="text" name=""
-					id="property" placeholder="Tipo de propiedad"
-				/>
+		<div class="cross-center between">
+			<label for="property" class="mt-2 mx-1">
+				<select class="input input-lighter full" id="property">
+					<option value="">Tipo de propiedad</option>
+				</select>
 			</label>
-			<label for="search">
-				<input class="input input-lighter full mb-2" type="text" name=""
+			<label for="search" class="mt-2 mx-1">
+				<input class="input input-lighter full" type="text" name=""
 					id="search" placeholder="Busqueda por palabra clave"
 				/>
 			</label>
-			<button class="btn btn-dark">
+			<button class="btn btn-dark mt-2 mx-1">
 				¡Busquemos!
 			</button>
 		</div>

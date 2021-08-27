@@ -16,6 +16,8 @@
 	--white-second: #F8F8F8;
 	--white-third: #E7E7E7;
 	--white-darken: #F7F7F7;
+
+	--hover-black: #262626;
 }
 :root{
 	--max-width: #{$max-width};
@@ -44,6 +46,7 @@
 		--base-font-size: 16px;
 		--logo-width: 11rem;
 		--logo-height: 1.5rem;
+		--section-spacer: 5rem;
 	}
 }
 
@@ -89,6 +92,14 @@ hr{
 }
 span{
 	vertical-align: middle
+}
+
+select{
+	background-image: linear-gradient(45deg, transparent 50%, #292929 50%), linear-gradient(135deg, #3f3f3f 50%, transparent 50%);
+  	background-position: calc(100% - 20px) calc(1em + 6px), calc(100% - 15px) calc(1em + 6px), calc(100% - 2.5em) 0.5em;
+  	background-size: 5px 5px, 5px 5px, 2px 1.5em;
+  	background-repeat: no-repeat;
+	color: var(--grey-medium);
 }
 
 // Para la "Cascada de CSS"

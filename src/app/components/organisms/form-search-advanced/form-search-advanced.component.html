@@ -1,1 +1,212 @@
-<p>form-search-advanced works!</p>
+<section class="form-advanced-container" [ngClass]="openFilter ? 'active' : ''" (click)="closeFilterSearch($event)">
+	<form class="form-advanced">
+		<div style="position: sticky; top: 0; background-color: inherit;">
+			<button class="tab border-b active">
+				En venta
+			</button>
+			<button class="tab border-b">
+				Alquiler
+			</button>
+		</div>
+		<div class="overlay-scroll">
+			<h4 class="title-4 my-2">Busqueda Avanzada</h4>
+			<label class="input-icon dt-grey full mb-2">
+				<input class="" type="search" name="" id="" placeholder="Departamento o Distrito" />
+				<svg width="24" height="24" fill="none" viewBox="0 0 24 24" class="to-end">
+					<path fill="#484848"
+						d="M19.023 16.977a35.13 35.13 0 01-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0016 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
+				</svg>
+			</label>
+			<button class="btn btn-dark full">Ver mapa</button>
+
+			<fieldset class="filter-property mt-3">
+				<legend class="mb-3">Tipo de propiedad</legend>
+				<select name="" id="" class="btn border-grey mb-2 full">
+					<option value="">Todos</option>
+				</select>
+				<select name="" id="" class="btn border-grey mb-2 full">
+					<option value="">Ciudad</option>
+				</select>
+				<select name="" id="" class="btn border-grey mb-2 full">
+					<option value="">Area</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="badroom flex between">
+				<legend class="mb-2">Dormitorios</legend>
+				<select name="" id="" class="btn border-grey me-1">
+					<option value="">Minimos</option>
+				</select>
+				<select name="" id="" class="btn border-grey ms-1">
+					<option value="">Maximos</option>
+				</select>
+			</fieldset>
+
+			<fieldset class="prices flex between">
+				<legend class="py-2">Precios</legend>
+				<select name="" id="" class="btn border-grey me-1">
+					<option value="">Desde</option>
+				</select>
+				<select name="" id="" class="btn border-grey ms-1">
+					<option value="">Hasta</option>
+				</select>
+			</fieldset>
+
+			<label for="maintenance-include" class="py-3 block">
+				<input type="checkbox" name="" id="maintenance-include" class="me-1">
+				Incluir mantenimiento en el precio final
+			</label>
+
+			<fieldset class="mb-3">
+				<legend class="mb-2">Otras operaciones</legend>
+				<div class="operation-options flex between">
+					<label for="temporal">
+						<input type="checkbox" name="" id="temporal" class="me-1">
+						Temporal
+					</label>
+					<label for="transpaso">
+						<input type="checkbox" name="" id="transpaso" class="me-1">
+						Transpaso
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="mb-3">
+				<legend class="mb-2">Superficie</legend>
+				<div class="superficies flex between mb-2 nowrap">
+					<label for="">
+						<select class="btn border-grey ps-1 pe-3">
+							<option value="">MT<sup>2</sup></option>
+						</select>
+					</label>
+					<label for="">
+						<input type="number" name="" id="" placeholder="Desde" class="btn border-grey">
+					</label>
+					<label for="">
+						<input type="number" name="" id="" placeholder="Hasta" class="btn border-grey">
+					</label>
+				</div>
+				<div class="">
+					<label for="">
+						<input type="checkbox" name="" id="">
+						Total
+					</label>
+					<label for="">
+						<input type="checkbox" name="" id="">
+						Techada
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="mb-3">
+				<legend>Baños</legend>
+				<ul class="btn border-grey flex between">
+					<li *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
+						<button style="border-left: 1px solid grey;">+{{ num }}</button>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="mb-3">
+				<legend>Estacionamiento</legend>
+				<ul class="btn border-grey flex between">
+					<li>
+						<button>Sin</button>
+					</li>
+					<li *ngFor="let num of [1,2,3,4,5,6,7]">
+						<button style="border-left: 1px solid grey;">+{{ num }}</button>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="mb-3">
+				<legend>Multimedia</legend>
+				<div>
+					<label for="road-360">
+						<input type="checkbox" name="" id="road-360">
+						Recorrido 360
+					</label>
+					<label for="videos">
+						<input type="checkbox" name="" id="videos">
+						Videos
+					</label>
+					<label for="photos">
+						<input type="checkbox" name="" id="photos">
+						Fotos
+					</label>
+					<label for="plane">
+						<input type="checkbox" name="" id="plane">
+						Planos
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="mb-3">
+				<legend>Antiguedad</legend>
+				<div class="house-options flex between mt-2">
+					<label for="in-build">
+						<input type="checkbox" name="" id="in-build">
+						En connstrucción
+					</label>
+					<label for="first">
+						<input type="checkbox" name="" id="first">
+						A estrenar
+					</label>
+					<label for="five-years">
+						<input type="checkbox" name="" id="five-years">
+						Hace 5 años
+					</label>
+					<label for="between-5-10">
+						<input type="checkbox" name="" id="between-5-10">
+						Entre 5 y 10 años
+					</label>
+					<label for="between-10-20">
+						<input type="checkbox" name="" id="between-10-20">
+						Entre 10 y 20 años
+					</label>
+					<label for="between-20-50">
+						<input type="checkbox" name="" id="between-20-50">
+						Entre 20 y 50 años
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="generales">
+				<label for="general" class="mb-2 block">
+					<p>Generales</p>
+					<select name="" id="general" class="btn border-grey full mt-1">
+						<option class="select-plac" value="">Selecciona los generales</option>
+					</select>
+				</label>
+				<label for="ambient" class="mb-2 block">
+					<p>Ambientes</p>
+					<select name="" id="ambient" class="btn border-grey full mt-1">
+						<option class="select-plac" value="">Seleccionar ambientes</option>
+					</select>
+				</label>
+				<label for="date-publish" class="mb-2 block">
+					<p>Fecha de publicación</p>
+					<select name="" id="data-publish" class="btn border-grey full mt-1">
+						<option class="select-plac" value="">Seleccionar fecha</option>
+					</select>
+				</label>
+				<label for="services" class="mb-2 block">
+					<p>Servicios</p>
+					<select name="" id="services" class="btn border-grey full mt-1">
+						<option class="select-plac" value="">Seleccionar servicios</option>
+					</select>
+				</label>
+				<label for="extern" class="mb-3 block">
+					<p>Exteriores</p>
+					<select name="" id="extern" class="btn border-grey full mt-1">
+						<option class="select-plac" value="">Seleccionar Exteriores</option>
+					</select>
+				</label>
+			</fieldset>
+
+			<button type="submit" class="btn btn-dark full">
+				¡Busquemos!
+			</button>
+		</div>
+	</form>
+</section>

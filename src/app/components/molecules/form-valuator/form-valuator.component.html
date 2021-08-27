@@ -1,44 +1,44 @@
-<form class="form-evaluator mt-5 mx-auto">
-	<label for="city">
-		<input class="input input-white mb-2 full" type="text"
+<form class="form-evaluator mt-5 mx-auto cross-center between">
+	<label for="city" class="mx-1 full">
+		<input class="input input-white full mb-2" type="text"
 			id="city" placeholder="Ciudad"
 		/>
 	</label>
-	<label for="address">
-		<input class="input input-white mb-2 full" type="text"
+	<label for="address" class="mx-1">
+		<input class="input input-white full mb-2" type="text"
 			id="address" placeholder="Numero de Calle"
 		/>
 	</label>
 
-	<fieldset class="departament">
-		<label>
-			<select class="input input-white mb-2">
+	<fieldset class="departament flex between row mb-2">
+		<label class="mx-1 item-8">
+			<select class="input input-white full">
 				<option class="input" value="">Departamento</option>
 				<option class="input" *ngFor="let option of options" [value]="option">
 					{{ option }}
 				</option>
 			</select>
 		</label>
-		<label for="number">
-			<input class="input input-white mb-2" type="number" name=""
+		<label for="number" class="mx-1 item-2">
+			<input class="input input-white full" type="number" name=""
 				id="number" placeholder="0"
 			>
 		</label>
 	</fieldset>
 
-	<fieldset class="departament">
-		<label for="badroom">
-			<input class="input input-white mb-2" type="text" name=""
+	<fieldset class="departament flex between row mb-2">
+		<label for="badroom" class="mx-1 item-5">
+			<input class="input input-white full" type="text" name=""
 				id="badroom" placeholder="Dormitorios"
 			/>
 		</label>
-		<label for="lift">
-			<input class="input input-white mb-2" type="text" name=""
+		<label for="lift" class="mx-1 item-5">
+			<input class="input input-white full" type="text" name=""
 				id="lift" placeholder="Ascensor"
 			/>
 		</label>
 	</fieldset>
-	<button type="submit" class="btn btn-dark full">
+	<button type="submit" class="btn btn-dark full mx-1">
 		Valor
 	</button>
 </form>

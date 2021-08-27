@@ -24,7 +24,8 @@ const components = [MenuComponent,
 	FormSearchComponent,
 	FormValuatorComponent,
 	SingleCardComponent,
-	PhoneNumberComponent]
+	PhoneNumberComponent
+]
 
 @NgModule({
 	declarations: [ ...components],

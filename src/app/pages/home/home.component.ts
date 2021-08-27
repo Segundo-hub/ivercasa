@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 				parking: 1,
 				size: 240
 			},
-			like: false,
+			like: true,
 			url_contact: 'https://contacte.me'
 		},
 		{

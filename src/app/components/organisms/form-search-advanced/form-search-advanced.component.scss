@@ -1,0 +1,58 @@
+@import "./../../../../assets/styles/_settings";
+
+.form-advanced{
+	background-color: var(--white-darken);
+	border-radius: var(--radius);
+	padding: 0 1.5rem 2rem;
+	font-weight: 600;
+	legend{
+		font-size: 1.15rem;
+	}
+}
+.form-advanced-container{
+	transition: none;
+}
+.generales{
+	p{
+		font-size: 1.15rem;
+	}
+}
+@include from-to($md, $lg){
+	.form-advanced{
+		max-width: 500px;
+		margin: auto;
+	}
+}
+
+@include to($lg){
+	.form-advanced-container{
+		@include full-wide(fixed);
+		padding: 2rem;
+		max-height: 100vh;
+		z-index: 10;
+		opacity: 0;
+		transform: scale(.8);
+		pointer-events: none;
+		&::after{
+			content: "";
+			background-color: rgba($color: #000000, $alpha: .75);
+			@include full-wide(absolute);
+			z-index: -1;
+		}
+		&.active{
+			opacity: 1;
+			transform: scale(1);
+			pointer-events: auto;
+		}
+	}
+	.form-advanced{
+		max-height: 94vh;
+		overflow: hidden auto;
+	}
+}
+
+@include to($lg - 20){
+	.form-advanced-container{
+		transition: all 300ms ease-out;
+	}
+}

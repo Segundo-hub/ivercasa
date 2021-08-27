@@ -1,0 +1,12 @@
+@import './../../../assets/styles/_settings';
+.filter-container{
+	@include from($lg){
+		grid-template-columns: minmax(20%, 400px) 1fr;
+	}
+}
+
+.mobile-search{
+	padding: 1.25rem 0;
+	background-color: var(--grey-lighter);
+	border-bottom: 1px solid var(--grey-dark);
+}
