@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Property } from 'app/models/property';
+import { PropertiesService } from 'app/service/properties.service';
 
 @Component({
 	selector: 'app-home',
@@ -7,67 +8,15 @@ import { Property } from 'app/models/property';
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	properties: Property[] = [
-		{
-			img: 'img.url',
-			price: 12340,
-			address: 'Miraflores - Lima',
-			description: 'Alquilo lindo departamento simplemente el texto de relleno.',
-			service: {
-				bathroom: 2,
-				debroom: 4,
-				parking: 1,
-				size: 240
-			},
-			like: false,
-			url_contact: 'https://contacte.me'
-		},
-		{
-			img: 'img.url',
-			price: 12340,
-			address: 'Miraflores - Lima',
-			description: 'Alquilo lindo departamento simplemente el texto de relleno.',
-			service: {
-				bathroom: 2,
-				debroom: 4,
-				parking: 1,
-				size: 240
-			},
-			like: false,
-			url_contact: 'https://contacte.me'
-		},
-		{
-			img: 'img.url',
-			price: 12340,
-			address: 'Miraflores - Lima',
-			description: 'Alquilo lindo departamento simplemente el texto de relleno.',
-			service: {
-				bathroom: 2,
-				debroom: 4,
-				parking: 1,
-				size: 240
-			},
-			like: true,
-			url_contact: 'https://contacte.me'
-		},
-		{
-			img: 'img.url',
-			price: 12340,
-			address: 'Miraflores - Lima',
-			description: 'Alquilo lindo departamento simplemente el texto de relleno.',
-			service: {
-				bathroom: 2,
-				debroom: 4,
-				parking: 1,
-				size: 240
-			},
-			like: false,
-			url_contact: 'https://contacte.me'
-		}
-	]
-	constructor() { }
 
-	ngOnInit(): void {
+	properties: Property[] = [];
+	principal: Property[] = [];
+	constructor( public dbProperties:  PropertiesService) {
+		this.properties = this.dbProperties.getProperties()
+	}
+
+	ngOnInit() {
+		this.principal = this.properties.filter((val, i) => i <3)
 	}
 
 }

@@ -60,6 +60,14 @@
 	.item-5{
 		flex-grow: 5;
 	}
+	.mitad{
+		width: 50%;
+	}
+}
+.between.self-normal{
+	& > *{
+		flex: none;
+	}
 }
 
 
@@ -71,6 +79,10 @@
 .to-start{
 	margin-left: 0;
 	margin-right: auto;
+}
+.to-bottom{
+	margin-top: auto;
+	margin-bottom: 0;
 }
 
 // ========================================================================
@@ -84,12 +96,6 @@
 	padding: 1rem 1.5rem;
 	transition: all 300ms ease;
 	background-color: transparent;
-	&.border-t{
-		border-radius: var(--radius) var(--radius) 0 0;
-	}
-	&.border-b{
-		border-radius: 0 0 var(--radius) var(--radius);
-	}
 	&.active{
 		background-color: var(--black-primary);
 		color: var(--white-third);
@@ -99,6 +105,57 @@
 		color: var(--white-third);
 	}
 }
+
+// ================================================================
+// ----------------------Borders
+
+.border-t{
+	border-radius: var(--radius) var(--radius) 0 0;
+}
+.border-b{
+	border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.border-l{
+	border-radius: var(--radius) 0 0 var(--radius);
+}
+.border-r{
+	border-radius: 0 var(--radius) 0  var(--radius);
+}
+
+// ==================================================================
+// ----------------------- list options
+
+.list-options{
+	display: inline-flex;
+	justify-content: space-between;
+	padding: .75rem 1rem;
+	background-color: var(--white-primary);
+	border: 2px solid var(--grey-lighter);
+	border-radius: var(--radius);
+	width: 100%;
+	li button {
+		background-color: transparent;
+		padding: .25rem;
+		border-left: 1px solid var(--grey-lighter);
+		color: var(--grey-medium);
+		&:hover{
+			color: var(--black-lighter);
+		}
+	}
+	li{
+		&:nth-child(1){
+			button{
+				border-left: none;
+			}
+		}
+	}
+	&:hover{
+		border-color: #128fb5aa;
+	}
+}
+
+
 
 .input-icon{
 	border-radius: var(--radius);
@@ -160,6 +217,17 @@
 	color: var(--black-primary);
 }
 
+.btn-icon-36{
+	width: 46px;
+	height: 46px;
+	border-radius: var(--radius);
+	background-color: var(--white-third);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--black-primary);
+}
+
 .btn, .input{
 	padding: 1rem 1.5rem;
 	transition: all 200ms ease-in;
@@ -196,6 +264,9 @@
 }
 select.input, select.btn{
 	padding: calc(1rem + 2px) 1.5rem;
+}
+select.tab{
+	padding: calc(.75rem + 2px) 1.5rem;
 }
 .input{
 	&:hover, &:focus{
@@ -268,20 +339,29 @@ select.input, select.btn{
 }
 
 @include from($lg){
-	.lg\:50\%{
-		width: 50%;
-	}
 	.lg\:grid-2{
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.lg\:grid-3{
 		grid-template-columns: repeat(3, 1fr);
 	}
+	.lg\:grid-6{
+		grid-template-columns: repeat(6, 1fr);
+	}
 	.lg\:column{
 		flex-direction: column;
 	}
 	.lg\:row{
 		flex-direction: row;
+	}
+	.lg\:80{
+		width: 80%;
+	}
+	.lg\:60{
+		width: 60%;
+	}
+	.lg\:50{
+		width: 50%;
 	}
 }
 
@@ -358,6 +438,30 @@ select.input, select.btn{
 	.lg\:my-0{
 		margin-top:0;
 	    margin-bottom:0;
+	}
+
+	.lg\:ms-1{
+		margin-left:.5rem;
+	}
+	.lg\:me-1{
+		margin-right:.5rem;
+	}
+	.lg\:mx-1{
+		margin-right:.5rem;
+	    margin-left:.5rem;
+	}
+	.lg\:mt-1{
+		margin-top:.5rem;
+	}
+	.lg\:mb-1{
+		margin-bottom:.5rem;
+	}
+	.lg\:my-1{
+		margin-top:.5rem;
+	    margin-bottom:.5rem;
+	}
+	.midium{
+		width: calc(50% - .5rem);
 	}
 }
 

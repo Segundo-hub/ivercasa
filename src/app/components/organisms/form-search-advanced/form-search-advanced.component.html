@@ -79,11 +79,11 @@
 							<option value="">MT<sup>2</sup></option>
 						</select>
 					</label>
-					<label for="">
-						<input type="number" name="" id="" placeholder="Desde" class="btn border-grey">
+					<label for="" class="ms-2">
+						<input type="number" name="" id="" placeholder="Desde" class="btn border-grey full">
 					</label>
-					<label for="">
-						<input type="number" name="" id="" placeholder="Hasta" class="btn border-grey">
+					<label for="" class="ms-2">
+						<input type="number" name="" id="" placeholder="Hasta" class="btn border-grey full">
 					</label>
 				</div>
 				<div class="">
@@ -99,43 +99,43 @@
 			</fieldset>
 
 			<fieldset class="mb-3">
-				<legend>Baños</legend>
-				<ul class="btn border-grey flex between">
+				<legend class="mb-2">Baños</legend>
+				<ul class="list-options">
 					<li *ngFor="let num of [1,2,3,4,5,6,7,8,9]">
-						<button style="border-left: 1px solid grey;">+{{ num }}</button>
+						<button>+{{ num }}</button>
 					</li>
 				</ul>
 			</fieldset>
 
 			<fieldset class="mb-3">
-				<legend>Estacionamiento</legend>
-				<ul class="btn border-grey flex between">
-					<li>
+				<legend class="mb-2">Estacionamiento</legend>
+				<ul class="list-options">
+					<li class="list-none">
 						<button>Sin</button>
 					</li>
 					<li *ngFor="let num of [1,2,3,4,5,6,7]">
-						<button style="border-left: 1px solid grey;">+{{ num }}</button>
+						<button>+{{ num }}</button>
 					</li>
 				</ul>
 			</fieldset>
 
 			<fieldset class="mb-3">
-				<legend>Multimedia</legend>
-				<div>
-					<label for="road-360">
-						<input type="checkbox" name="" id="road-360">
+				<legend class="mb-2">Multimedia</legend>
+				<div class="flex between">
+					<label for="road-360" class="mitad mb-2">
+						<input type="checkbox" name="" id="road-360" class="me-1">
 						Recorrido 360
 					</label>
-					<label for="videos">
-						<input type="checkbox" name="" id="videos">
+					<label for="videos" class="mitad mb-2">
+						<input type="checkbox" name="" id="videos" class="me-1">
 						Videos
 					</label>
-					<label for="photos">
-						<input type="checkbox" name="" id="photos">
+					<label for="photos" class="mitad mb-2">
+						<input type="checkbox" name="" id="photos" class="me-1">
 						Fotos
 					</label>
-					<label for="plane">
-						<input type="checkbox" name="" id="plane">
+					<label for="plane" class="mitad mb-2">
+						<input type="checkbox" name="" id="plane" class="me-1">
 						Planos
 					</label>
 				</div>
@@ -144,28 +144,28 @@
 			<fieldset class="mb-3">
 				<legend>Antiguedad</legend>
 				<div class="house-options flex between mt-2">
-					<label for="in-build">
-						<input type="checkbox" name="" id="in-build">
+					<label for="in-build" class="mitad mb-2">
+						<input type="checkbox" name="" id="in-build" class="me-1">
 						En connstrucción
 					</label>
-					<label for="first">
-						<input type="checkbox" name="" id="first">
+					<label for="first" class="mitad mb-2">
+						<input type="checkbox" name="" id="first" class="me-1">
 						A estrenar
 					</label>
-					<label for="five-years">
-						<input type="checkbox" name="" id="five-years">
+					<label for="five-years" class="mitad mb-2">
+						<input type="checkbox" name="" id="five-years" class="me-1">
 						Hace 5 años
 					</label>
-					<label for="between-5-10">
-						<input type="checkbox" name="" id="between-5-10">
+					<label for="between-5-10" class="mitad mb-2">
+						<input type="checkbox" name="" id="between-5-10" class="me-1">
 						Entre 5 y 10 años
 					</label>
-					<label for="between-10-20">
-						<input type="checkbox" name="" id="between-10-20">
+					<label for="between-10-20" class="mitad mb-2">
+						<input type="checkbox" name="" id="between-10-20" class="me-1">
 						Entre 10 y 20 años
 					</label>
-					<label for="between-20-50">
-						<input type="checkbox" name="" id="between-20-50">
+					<label for="between-20-50" class="mitad mb-2">
+						<input type="checkbox" name="" id="between-20-50" class="me-1">
 						Entre 20 y 50 años
 					</label>
 				</div>

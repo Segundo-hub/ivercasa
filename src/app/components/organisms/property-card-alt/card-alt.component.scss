@@ -1,23 +1,14 @@
 .article{
 	border: 2px solid var(--white-darken);
 	border-radius: var(--radius);
-	&__img{
-		height: 276px;
-	}
-	&__content, &__contact{
-		padding: 1rem 1.25rem;
-		.includes{
-			color: var(--grey-dark);
-			display: flex;
-			flex-wrap: wrap;
-			div{
-				flex: 0 0 50%;
-			}
-		}
+	&__content{
+		padding: 0 0 1rem 1rem;
 	}
 	&__contact{
+		padding: .5rem 1rem;
 		background-color: var(--white-darken);
 		border-radius: 0 0 var(--radius) var(--radius);
+		display: flex;
 	}
 	&-address{
 		font-style: normal;

@@ -9,6 +9,7 @@ export class Property {
 	img: string = "";
 	price: number = 0;
 	address: string = '';
+	name: string = "";
 	description: string = '';
 	service: Service = new Service();
 	like: boolean = false;

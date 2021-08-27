@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { OrganismsModule } from '../components/organisms/organisms.module';
 import { MoleculesModule } from '../components/molecules/molecules.module';
+import { PropertiesService } from 'app/service/properties.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,10 +14,12 @@ import { MoleculesModule } from '../components/molecules/molecules.module';
 		HomeComponent,
 		SearchComponent
 	],
+	providers: [PropertiesService],
 	imports: [
 		CommonModule,
 		OrganismsModule,
-		MoleculesModule
+		MoleculesModule,
+		RouterModule
 	]
 })
 export class PagesModule { }

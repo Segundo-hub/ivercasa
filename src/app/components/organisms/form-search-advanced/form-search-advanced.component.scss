@@ -1,7 +1,7 @@
 @import "./../../../../assets/styles/_settings";
 
 .form-advanced{
-	background-color: var(--white-darken);
+	background-color: var(--grey-lighter);
 	border-radius: var(--radius);
 	padding: 0 1.5rem 2rem;
 	font-weight: 600;
@@ -48,6 +48,7 @@
 	.form-advanced{
 		max-height: 94vh;
 		overflow: hidden auto;
+		background-color: var(--white-darken);
 	}
 }
 

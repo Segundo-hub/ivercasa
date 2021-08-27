@@ -1,7 +1,12 @@
-<section class="property-up only-desktop">
+<section class="property-up only-desktop py-4">
 	<div class="l-section">
-		<h2 class="title-3 txt-center">Propiedades <strong>Destacadas</strong></h2>
-		<button class="btn btn-dark">Ver mas</button>
+		<div class="cross-center">
+			<h2 class="title-3 txt-center">Propiedades <strong>Destacadas</strong></h2>
+			<button class="btn btn-dark to-end">Ver mas</button>
+		</div>
+		<div class="slider-single mb-3 grid lg:grid-6 mt-3">
+			<single-card *ngFor="let property of forSlider" [property]="property"></single-card>
+		</div>
 	</div>
 </section>
 
@@ -30,10 +35,28 @@
 		</div>
 		<div class="property-list-header cross-center mb-2">
 			<h4 class="title-4">Propiedades</h4>
-			<p class="pagination to-end">
-				Pag {{ 1 }}/{{ 133 }} - TOTAL {{ 1.593 }} Propiedades
-			</p>
+			<div class="to-end cross-center">
+				<p class="pagination">
+					Pag {{ 1 }}/{{ 133 }} - TOTAL {{ 1.593 }} Propiedades
+				</p>
+				<div class="cross-center ms-2">
+					<button class="btn-icon-36 only-desktop">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.17" height="19.398" viewBox="0 0 22.17 19.398"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M6.466,10.217v3.464A1.039,1.039,0,0,1,5.427,14.72H1.039A1.039,1.039,0,0,1,0,13.681V10.217A1.039,1.039,0,0,1,1.039,9.178H5.427a1.039,1.039,0,0,1,1.039,1.039ZM0,17.145v3.464a1.039,1.039,0,0,0,1.039,1.039H5.427a1.039,1.039,0,0,0,1.039-1.039V17.145a1.039,1.039,0,0,0-1.039-1.039H1.039A1.039,1.039,0,0,0,0,17.145ZM5.427,2.25H1.039A1.039,1.039,0,0,0,0,3.289V6.753A1.039,1.039,0,0,0,1.039,7.792H5.427A1.039,1.039,0,0,0,6.466,6.753V3.289A1.039,1.039,0,0,0,5.427,2.25Zm3.464,19.4H21.13a1.039,1.039,0,0,0,1.039-1.039V17.145a1.039,1.039,0,0,0-1.039-1.039H8.891a1.039,1.039,0,0,0-1.039,1.039v3.464A1.039,1.039,0,0,0,8.891,21.648ZM7.852,3.289V6.753A1.039,1.039,0,0,0,8.891,7.792H21.13A1.039,1.039,0,0,0,22.17,6.753V3.289A1.039,1.039,0,0,0,21.13,2.25H8.891A1.039,1.039,0,0,0,7.852,3.289ZM8.891,14.72H21.13a1.039,1.039,0,0,0,1.039-1.039V10.217A1.039,1.039,0,0,0,21.13,9.178H8.891a1.039,1.039,0,0,0-1.039,1.039v3.464A1.039,1.039,0,0,0,8.891,14.72Z" transform="translate(0 -2.25)"/>
+						</svg>
+					</button>
+					<button class="btn-icon-36 ms-2 only-desktop" style="background: var(--black-primary);">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.466" height="19.398" viewBox="0 0 22.466 19.398"><defs><style>.a{fill:#232323;}</style></defs><g transform="translate(-1725.915 -1731.051)"><path class="a" d="M6.466,10.217v3.464A1.039,1.039,0,0,1,5.427,14.72H1.039A1.039,1.039,0,0,1,0,13.681V10.217A1.039,1.039,0,0,1,1.039,9.178H5.427a1.039,1.039,0,0,1,1.039,1.039ZM0,17.145v3.464a1.039,1.039,0,0,0,1.039,1.039H5.427a1.039,1.039,0,0,0,1.039-1.039V17.145a1.039,1.039,0,0,0-1.039-1.039H1.039A1.039,1.039,0,0,0,0,17.145ZM5.427,2.25H1.039A1.039,1.039,0,0,0,0,3.289V6.753A1.039,1.039,0,0,0,1.039,7.792H5.427A1.039,1.039,0,0,0,6.466,6.753V3.289A1.039,1.039,0,0,0,5.427,2.25Z" transform="translate(1725.915 1728.801)"/><path class="a" d="M6.466,10.217v3.464A1.039,1.039,0,0,1,5.427,14.72H1.039A1.039,1.039,0,0,1,0,13.681V10.217A1.039,1.039,0,0,1,1.039,9.178H5.427a1.039,1.039,0,0,1,1.039,1.039ZM0,17.145v3.464a1.039,1.039,0,0,0,1.039,1.039H5.427a1.039,1.039,0,0,0,1.039-1.039V17.145a1.039,1.039,0,0,0-1.039-1.039H1.039A1.039,1.039,0,0,0,0,17.145ZM5.427,2.25H1.039A1.039,1.039,0,0,0,0,3.289V6.753A1.039,1.039,0,0,0,1.039,7.792H5.427A1.039,1.039,0,0,0,6.466,6.753V3.289A1.039,1.039,0,0,0,5.427,2.25Z" transform="translate(1733.915 1728.801)"/><path class="a" d="M6.466,10.217v3.464A1.039,1.039,0,0,1,5.427,14.72H1.039A1.039,1.039,0,0,1,0,13.681V10.217A1.039,1.039,0,0,1,1.039,9.178H5.427a1.039,1.039,0,0,1,1.039,1.039ZM0,17.145v3.464a1.039,1.039,0,0,0,1.039,1.039H5.427a1.039,1.039,0,0,0,1.039-1.039V17.145a1.039,1.039,0,0,0-1.039-1.039H1.039A1.039,1.039,0,0,0,0,17.145ZM5.427,2.25H1.039A1.039,1.039,0,0,0,0,3.289V6.753A1.039,1.039,0,0,0,1.039,7.792H5.427A1.039,1.039,0,0,0,6.466,6.753V3.289A1.039,1.039,0,0,0,5.427,2.25Z" transform="translate(1741.915 1728.801)"/></g>
+						</svg>
+					</button>
+					<select name="" id="" class="btn btn-lighter tab ms-2">
+						<option value="">Organizar</option>
+					</select>
+				</div>
+			</div>
 		</div>
-		<property-card></property-card>
+		<property-card-alt class="only-desktop" *ngFor="let property of properties" [property]="property">
+		</property-card-alt>
+		<property-card class="only-mobile" *ngFor="let property of properties" [property]="property"></property-card>
+
 	</div>
 </section>

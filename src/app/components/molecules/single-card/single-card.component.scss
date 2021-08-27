@@ -1,0 +1,23 @@
+@mixin image-gradient($path) {
+    background-image: linear-gradient(45deg, #2f2e2d9c 24%, rgba(41, 196, 169, 0) 100%), url($path);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.single-article{
+	border-radius: var(--radius);
+	background-image: var(--slider-img);
+    background-size: cover;
+    background-repeat: no-repeat;
+	color: var(--white-second)
+}
+.content-end{
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(41, 41, 41, 0.63) 52.6%);
+	padding: 1rem;
+}
+
+.single-address{
+	font-style: normal;
+	font-size: 1.15rem;
+	font-weight: 600;
+}

@@ -1,16 +1,18 @@
 <form class="form-evaluator mt-5 mx-auto cross-center between">
-	<label for="city" class="mx-1 full">
-		<input class="input input-white full mb-2" type="text"
-			id="city" placeholder="Ciudad"
-		/>
-	</label>
-	<label for="address" class="mx-1">
-		<input class="input input-white full mb-2" type="text"
-			id="address" placeholder="Numero de Calle"
-		/>
-	</label>
+	<div class="full between flex">
+		<label for="city" class="mx-1 full">
+			<input class="input input-white full midium mb-2" type="text"
+				id="city" placeholder="Ciudad"
+			/>
+		</label>
+		<label for="address" class="mx-1 full">
+			<input class="input input-white full midium mb-2" type="text"
+				id="address" placeholder="Numero de Calle"
+			/>
+		</label>
+	</div>
 
-	<fieldset class="departament flex between row mb-2">
+	<fieldset class="departament flex between nowrap row mb-2">
 		<label class="mx-1 item-8">
 			<select class="input input-white full">
 				<option class="input" value="">Departamento</option>
@@ -26,7 +28,7 @@
 		</label>
 	</fieldset>
 
-	<fieldset class="departament flex between row mb-2">
+	<fieldset class="departament flex between mb-2 nowrap">
 		<label for="badroom" class="mx-1 item-5">
 			<input class="input input-white full" type="text" name=""
 				id="badroom" placeholder="Dormitorios"

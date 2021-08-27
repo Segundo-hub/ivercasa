@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { PropertyCardComponent } from './property-card/property-card.component';
 import { FormSearchAdvancedComponent } from './form-search-advanced/form-search-advanced.component';
 import { MoleculesModule } from '../molecules/molecules.module';
+import { CardAltComponent } from './property-card-alt/card-alt.component';
 
 
 
 @NgModule({
 	declarations: [
 		PropertyCardComponent,
-		FormSearchAdvancedComponent
+		FormSearchAdvancedComponent,
+  		CardAltComponent
 	],
 	imports: [
 		CommonModule,
@@ -17,7 +19,8 @@ import { MoleculesModule } from '../molecules/molecules.module';
 	],
 	exports: [
 		PropertyCardComponent,
-		FormSearchAdvancedComponent
+		FormSearchAdvancedComponent,
+		CardAltComponent
 	]
 })
 export class OrganismsModule { }

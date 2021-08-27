@@ -9,10 +9,10 @@
 		<h3 class="title-3 full txt-center">
 			Propiedades <strong>Destacadas</strong>
 		</h3>
-		<button class="btn btn-dark mt-2 px-6">VER MAS</button>
+		<a routerLink="/search" class="btn btn-dark mt-2 px-6">VER MAS</a>
 	</div>
 	<div class="propertys-list grid lg:grid-3">
-		<property-card *ngFor="let property of properties"
+		<property-card *ngFor="let property of principal"
 			[property]="property">
 		</property-card>
 	</div>

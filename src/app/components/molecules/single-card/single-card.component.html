@@ -1,1 +1,14 @@
-<p>single-card works!</p>
+<article [style]="'--slider-img: url(assets/img/' + property.img + ')'" class="single-article square">
+	<div class="content flex column">
+		<div class="to-bottom content-end border-b flex column">
+			<address class="single-address">{{ property.address }}</address>
+			<p>{{ property.price | currency : 'S/ '}}</p>
+			<p>(USD {{ (property.price / 4.11 | currency)}})</p>
+			<a href="#" class="btn-icon-24 to-end" style="margin-top: -1.5rem;">
+				<svg width="8.223" height="14.383" viewBox="0 0 8.223 14.383">
+					<path class="a" d="M16.995,13.383,11.552,7.945a1.028,1.028,0,1,1,1.456-1.452l6.166,6.161a1.026,1.026,0,0,1,.03,1.417l-6.191,6.2a1.028,1.028,0,0,1-1.456-1.452Z" transform="translate(-11.251 -6.194)"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</article>
